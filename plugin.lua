@@ -56,13 +56,13 @@ function run(msg)
 		save_data("users.json", users)
 		return send_key(msg.from.id, start_txt, keyboard)
 	elseif msg.text == "درباره ما📋" then
-		about_txt = "درباره مامتنش خخخخخخخخ"
+		about_txt = "ربات توسظ علیرضا عابدزاده با ایدی @ALIREZA_ABEDZADEH ساخته شده است. کانال ما: @BOTANTISPAM1"
 		about_key = {
 		{
-		{text = "تله جک 😜" , url = "https://telegram.me/jokstel"}
+		{text = "برنامه 😜" , url = "https://telegram.me/BOTANTISPAM1"}
 		},
 		{
-		{text = "سازنده" , url = "https://telegram.me/IT_MKH"}
+		{text = "سازنده" , url = "https://telegram.me/ALIREZA_ABEDZADEH"}
 		}
 		}
 		return send_inline(msg.from.id, about_txt, about_key)
@@ -75,14 +75,14 @@ function run(msg)
 			return send_msg(msg.from.id, help_user, true)
 		end
 	elseif msg.text == "تبلیغ و تبادل" then
-		rdjvn = mem_num("@jokstel")
+		rdjvn = mem_num("@BOTANTISPAM1")
 		i=0
 		for k,v in pairs(users) do
 			i=i+1
 		end
 		bstat = i
 		text = "نمایش آمار زنده:\n     زمان: "..os.date("%F - %H:%M:%S").."\n     کانال: "..rdjvn.result.."\n     ربات: "..bstat.."\n\n`برای تبادل و درج تبلیغات خود با ما در ارتباط باشید:`"
-		return send_inline(msg.from.id, text, {{{text = "ارتباط با مدیر تبلیغات" , url = "https://telegram.me/IT_MKH"}},{{text = "اگر ریپورت هستید برای ارتباط اینجا کلیک کنید" , url = "https://telegram.me/it_mkh_bot"}},{{text = "برای سفارش هر گونه ربات کلیک کنید" , url = "https://telegram.me/it_mkh"}}})
+		return send_inline(msg.from.id, text, {{{text = "ارتباط با مدیر تبلیغات" , url = "https://telegram.me/ALIREZA_ABEDZADEH"}},{{text = "اگر ریپورت هستید برای ارتباط اینجا کلیک کنید" , url = "https://telegram.me/ABEDZADEHERTEBATBOT"}},{{text = "برای سفارش هر گونه ربات کلیک کنید" , url = "https://telegram.me/ALIREZA_ABEDZADEH"}}})
 	elseif msg.text:find('/sendtoall') and msg.chat.id == admingp then
 		local usertarget = msg.text:input()
 		if usertarget then
